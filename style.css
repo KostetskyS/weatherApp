@@ -1,0 +1,43 @@
+body {
+    font-size: 18px;
+    font-family: arial;
+    font-weight: bold;
+}
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.city, .temperature, .weather, .wind {
+    margin-bottom: 15px;
+}
+
+.rain {
+    color: white;
+    background-image: url('img/rain.jpg');
+}
+
+.foggy {
+    color: black;
+    background-image: url('img/foggy.jpg');
+}
+
+.sunny {
+    color: white;
+    background-image: url('img/sunny.jpg');
+}
+
+.storm {
+    color: white;
+    background-image: url('img/storm.jpg');
+}
