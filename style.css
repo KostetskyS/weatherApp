@@ -1,5 +1,5 @@
 body {
-    font-size: 18px;
+    font-size: 22px;
     font-family: arial;
     font-weight: bold;
 }
@@ -25,6 +25,7 @@ body {
 .rain {
     color: white;
     background-image: url('img/rain.jpg');
+    background-repeat: no-repeat;
 }
 
 .foggy {
@@ -41,3 +42,9 @@ body {
     color: white;
     background-image: url('img/storm.jpg');
 }
+
+.clouds {
+    color: rgb(19, 18, 18);
+    background-image: url('img/clouds.jpg');
+}
+

@@ -8,21 +8,33 @@ fetch ('https://api.openweathermap.org/data/2.5/weather?id=703448&appid=5f2a3794
         document.querySelector('.weather').textContent += data.weather[0]['description'];
         document.querySelector('.wind').textContent += data.wind['speed'] + ' ' + 'm/s';
         document.querySelector('.pict p').innerHTML = `<img src= "https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png"> `;
+
         let widgetBackground = document.querySelector('.widget');
-        if (data.weather[0]['description'] == 'overcast clouds') {
+
+        if (data.weather[0]['main'].includes('Foggy')) {
             widgetBackground.classList.add('foggy');
-            console.log('dsadsa')
-        }
-        // if (data.weather[0]['description'] == 'overcats clouds') {
-        //     widgetBackground.classList.add('foggy');
-        // }
-        // if (data.weather[0]['description'] == 'overcats clouds') {
-        //     widgetBackground.classList.add('sunny');
-        // }
-        // if (data.weather[0]['description'] == 'overcats clouds') {
-        //     widgetBackground.classList.add('storm');
-        // }
-        console.log(data);
+    
+        } 
+
+        if (data.weather[0]['main'].includes('Rain')) {
+            widgetBackground.classList.add('rain');
+    
+        } 
+
+        if (data.weather[0]['main'].includes('Sunny')) {
+            widgetBackground.classList.add('sunny');
+    
+        } 
+
+        if (data.weather[0]['main'].includes('Storm')) {
+            widgetBackground.classList.add('storm');
+    
+        } 
+        
+        if (data.weather[0]['main'].includes('Clouds')) {
+            widgetBackground.classList.add('clouds');
+    
+        } 
     })
     .catch(function() {
         alert('памилка')
